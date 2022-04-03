@@ -1,0 +1,56 @@
+/* styles from figma*/
+header {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    width: 1044px;
+    height: 64px;
+}
+
+h2{font-size: 31px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-align: center;}
+.icon{
+    width: 42px;
+    height: 42px;
+}
+.header-dummy{
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchbar{
+    display: flex;
+}
+
+.m-headline{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    height: 155px;
+    width: 680px;
+    left: 380px;
+    top: 104px;
+    border-radius: 0px;
+}
+
+@keyframes spin {/*
+    0%,9% {transform: rotate(0deg) }
+    10%,19% {transform: rotate(40deg)}
+    20%,29%{ transform: rotate(80deg) }
+    30%,39%{ transform: rotate(120deg) }
+    40%,49%{ transform: rotate(160deg) }
+    50%,59%{ transform: rotate(200deg) }
+    60%,69%{ transform: rotate(240deg) }
+    70%,79%{ transform: rotate(280deg) }
+    80%,89%{ transform: rotate(320deg) }
+    90%, 100% { transform: rotate(360deg) }*/
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
