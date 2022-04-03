@@ -20,16 +20,14 @@ export const computePaginationList = (currentPage: number, totalPages: number)  
 
     let lastVal=0;
     let paginationList:string[] = [];
-    pages.map(value => {
-        if(value <= 0 || value>totalPages){
-           return;
-        }
-        if(value-lastVal>1){
-            paginationList=[...paginationList,"...",value.toString()]
-        }else{
-            paginationList=[...paginationList, value.toString()]
+    pages.forEach(value => {
+        if(value > 0 && value<=totalPages){
+            (value-lastVal>1) ?
+                paginationList=[...paginationList,"...",value.toString()] :
+                paginationList=[...paginationList, value.toString()]
+
         }
         lastVal=value
-    } )
+    })
     return paginationList
 }
