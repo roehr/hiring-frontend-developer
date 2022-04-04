@@ -3,19 +3,22 @@ import {TestimonialsList} from "./TestimonialsList";
 import React from "react";
 import {Headline} from "./Headline";
 import {Header} from "./Header";
-import {Testimonials, Track} from "../model";
+import {Testimonials, TestimonialsRoot, Track} from "../testimonial.model";
 import {getAllTracks, getTestimonials} from "../service/fetchData";
-import {Pagination} from "./Pagination";
+import {PaginationArea} from "./PaginationArea";
+import {AllTracks, TrackData} from "../tracks.model";
+import {enhanceMappingForSearch} from "../utils/enhanceTracks";
 
 const Wrapper = () => {
     const [loading, isLoading] = React.useState(true);
     const [data, setdata] = React.useState(null as unknown as Testimonials)
-    const [trackData, settrackData] = React.useState(null as unknown as Track[])
+    const [trackData, settrackData] = React.useState([] as TrackData[])
     const [order, setOrder] = React.useState("newest_first")
     const [page, setPage] = React.useState(1)
+    const [enhancedTrackData, setEnhancedTrackData] = React.useState([])
     React.useEffect(() => {
         getAllTracks().then((data) => {
-                settrackData(data)
+                settrackData(data.tracks)
             }
         ).catch()
     }, [])
@@ -29,7 +32,6 @@ const Wrapper = () => {
         ).catch()
     }, [order, page])
 
-
     const onPaginationClicked = (newPage: number) => {
         setPage(newPage)
     }
@@ -38,9 +40,9 @@ const Wrapper = () => {
         <Header/>
         <div className="mentoring-container">
             <Headline/>
-            <SearchBar />
-            <TestimonialsList data={data} loading={loading}/>
-            {!loading && data.pagination && <Pagination pagination={data.pagination} onPageClicked={onPaginationClicked}/>}
+            <SearchBar  counts={data&&data.track_counts? data.track_counts : undefined} trackList={trackData}/>
+
+            {!loading && data.pagination && <PaginationArea pagination={data.pagination} onPageClicked={onPaginationClicked}/>}
         </div>
     </div>
 }

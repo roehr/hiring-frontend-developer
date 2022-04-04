@@ -1,13 +1,12 @@
 import * as React from "react";
-import {PaginationModel} from "../model";
+import {Pagination} from "../testimonial.model";
 import {computePaginationList} from "../utils";
 
 interface PaginationProps {
-    pagination: PaginationModel
+    pagination: Pagination
     onPageClicked: (page: number) => void
 }
-const Pagination = (props: PaginationProps) => {
-    console.log(props.pagination.current_page);
+const PaginationArea = (props: PaginationProps) => {
 
     const onPreviousClicked = () => {
         if(props.pagination.current_page !== 1) {
@@ -45,4 +44,4 @@ const Pagination = (props: PaginationProps) => {
     </div>
 }
 
-export {Pagination}
+export {PaginationArea}

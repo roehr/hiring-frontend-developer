@@ -1,6 +1,6 @@
 import React from "react";
 import {iconMap} from "../utils/iconurls";
-import {Result, Testimonials} from "../model";
+import {Result, Testimonials} from "../testimonial.model";
 interface TestimonialsListProps {
     data?: Testimonials
     loading: boolean

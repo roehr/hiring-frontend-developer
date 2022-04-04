@@ -1,4 +1,4 @@
-export * from "./Pagination"
+export * from "./PaginationArea"
 export * from "./Header"
 export * from "./Headline"
 export * from "./SearchBar"

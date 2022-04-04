@@ -1,13 +1,3 @@
-/* styles from figma*/
-header {
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    width: 1044px;
-    height: 64px;
-}
 
 h2{font-size: 31px;
     font-weight: 700;
@@ -21,12 +11,16 @@ h2{font-size: 31px;
 .header-dummy{
     display: flex;
     justify-content: space-between;
+    height: 64px;
 }
 
 .searchbar{
     display: flex;
 }
-
+.mentoring-container{
+    display: flex;
+    flex-direction: column;
+}
 .m-headline{
     display: flex;
     flex-direction: column;
