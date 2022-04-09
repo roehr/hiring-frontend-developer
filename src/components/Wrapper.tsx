@@ -41,7 +41,7 @@ const Wrapper = () => {
         <div className="mentoring-container">
             <Headline/>
             <SearchBar  counts={data&&data.track_counts? data.track_counts : undefined} trackList={trackData}/>
-
+            <TestimonialsList data={data}  loading={loading}/>
             {!loading && data.pagination && <PaginationArea pagination={data.pagination} onPageClicked={onPaginationClicked}/>}
         </div>
     </div>

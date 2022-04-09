@@ -33,18 +33,18 @@ h2{font-size: 31px;
     top: 104px;
     border-radius: 0px;
 }
-
-@keyframes spin {/*
-    0%,9% {transform: rotate(0deg) }
-    10%,19% {transform: rotate(40deg)}
-    20%,29%{ transform: rotate(80deg) }
-    30%,39%{ transform: rotate(120deg) }
-    40%,49%{ transform: rotate(160deg) }
-    50%,59%{ transform: rotate(200deg) }
-    60%,69%{ transform: rotate(240deg) }
-    70%,79%{ transform: rotate(280deg) }
-    80%,89%{ transform: rotate(320deg) }
-    90%, 100% { transform: rotate(360deg) }*/
+.m-results-zone{
+    min-height:300px;
+}
+.track-icon{
+    width: 50px;
+}
+.testimonial-row {
+    display: flex;
+    border-bottom: 1px solid #EAECF3;
+}
+@keyframes spin {
     0% {transform: rotate(0deg)}
     100% {transform: rotate(360deg)}
 }
+

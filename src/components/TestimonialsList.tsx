@@ -1,6 +1,7 @@
 import React from "react";
 import {iconMap} from "../utils/iconurls";
 import {Result, Testimonials} from "../testimonial.model";
+import moment from "moment";
 interface TestimonialsListProps {
     data?: Testimonials
     loading: boolean
@@ -23,18 +24,40 @@ const TestimonialsList = (props: TestimonialsListProps) => {
             <p>Testimonials are left by students on ending successful mentoring discussions.</p></div>
     }
 
+
+    const renderMentorInfo = (result:Result) => {
+        return (<>
+            <div className="mentor-image">
+                <img
+                    src={result.mentor.avatar_url}
+                    alt="" role="presentation" className="icon"/>
+            </div>
+            <div className="mentor-text-wrap">
+                <div className="mentorname">
+                    {result.mentor.handle}
+                </div>
+                <div className="mentorTopic">
+                    {`on ${result.exercise.title} in ${result.track.title}`}
+                </div>
+            </div>
+        </>)
+
+    }
     const renderTestimonialRow = (result: Result, index: number)  =>
         (
-            <div className={`testimonial-row`} key={index}>
+            <a href={`#${result.id}`} className={`testimonial-row`} key={index}>
                 <div className="track-icon">
                     <img
-                        src={iconMap.get(result.track.icon_url)}
+                        src={result.track.icon_url}
                         alt="" role="presentation" className="icon"/>
                 </div>
-                <div className="mentor-info">{result.mentor.handle}</div>
+                <div className="mentor-info">
+                    {renderMentorInfo(result)}
+                </div>
                 <div className="testimonial-content">{result.content}</div>
-                <div className="navigation"></div>
-            </div>
+                <div className="time">{moment(result.created_at).fromNow()}</div>
+                <div className="arrow"></div>
+            </a>
         );
 
     const renderTestimonials = () =>
@@ -49,10 +72,9 @@ const TestimonialsList = (props: TestimonialsListProps) => {
         )
 
 
-    return <div className="c-results-zone">
+    return <div className="m-results-zone">
         {props.loading ? renderLoadingAnimation() : ''}
         {renderTestimonials()}
-
     </div>
 }
 

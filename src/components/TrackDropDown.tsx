@@ -4,17 +4,23 @@ interface TrackDropDownProps{
     enhancedData: EnhancedTrack[]
 }
 const TrackDropDown = (props: TrackDropDownProps) => {
-
+    const [active, setActive] = React.useState(false)
     const renderElement = (track:EnhancedTrack) =>
         <div className="option">
             <input type="radio" id={track.slug}/> <label htmlFor={track.slug}>{track.title}</label>
             <span>{track.count}</span>
         </div>
+    const onButtonClicked = () =>  {
+        setActive(!active)
+    }
 
     return <div className="trackdropdown">
-    {props.enhancedData.map((track) => {
-       return renderElement(track)
-    })}
+        <button aria-haspopup="true" onClick={onButtonClicked}>
+            Test
+        </button>
+        {active && props.enhancedData.map((track) => {
+            return renderElement(track)
+        })}
 </div>
 }
 export {TrackDropDown}
