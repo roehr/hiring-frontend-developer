@@ -1,21 +1,22 @@
-import {SearchBar} from "./SearchBar";
-import {TestimonialsList} from "./TestimonialsList";
+import {SearchBar} from "./testimonial/SearchBar";
+import {TestimonialsList} from "./testimonial/TestimonialsList";
 import React from "react";
-import {Headline} from "./Headline";
-import {Header} from "./Header";
-import {Testimonials, TestimonialsRoot, Track} from "../testimonial.model";
+import {Hero} from "./header/Hero";
+import {Header} from "./header/Header";
+import {Testimonials} from "../testimonial.model";
 import {getAllTracks, getTestimonials} from "../service/fetchData";
-import {PaginationArea} from "./PaginationArea";
-import {AllTracks, TrackData} from "../tracks.model";
-import {enhanceMappingForSearch} from "../utils/enhanceTracks";
+import {PaginationArea} from "./testimonial/PaginationArea";
+import {TrackData} from "../tracks.model";
+import './Wrapper.css';
 
 const Wrapper = () => {
     const [loading, isLoading] = React.useState(true);
     const [data, setdata] = React.useState(null as unknown as Testimonials)
     const [trackData, settrackData] = React.useState([] as TrackData[])
     const [order, setOrder] = React.useState("newest_first")
+    const [track, setTrack] = React.useState("")
+    const [query, setQuery] = React.useState("")
     const [page, setPage] = React.useState(1)
-    const [enhancedTrackData, setEnhancedTrackData] = React.useState([])
     React.useEffect(() => {
         getAllTracks().then((data) => {
                 settrackData(data.tracks)
@@ -24,23 +25,44 @@ const Wrapper = () => {
     }, [])
     React.useEffect(() => {
         isLoading(true)
-        getTestimonials(page, order).then(
+        const trackParam=track===""? undefined: track
+        const queryParam=query===""? undefined: query
+        getTestimonials(page, order,trackParam,queryParam).then(
             (data) => {
                 setdata(data.testimonials);
                 isLoading(false);
             }
         ).catch()
-    }, [order, page])
+    }, [order, page, track, query])
 
     const onPaginationClicked = (newPage: number) => {
         setPage(newPage)
     }
 
-    return <div id="exercism-testimonial">
+    const onSearch = (newQuery: string) => {
+        setQuery(newQuery)
+    }
+
+    const onTrackSelect = (newTrack: string) => {
+        setTrack(newTrack)
+    }
+
+    const onOrderSelect = (order: string) => {
+        setOrder(order)
+    }
+
+    return <div id="testimonial">
         <Header/>
-        <div className="mentoring-container">
-            <Headline/>
-            <SearchBar  counts={data&&data.track_counts? data.track_counts : undefined} trackList={trackData}/>
+        <Hero/>
+        <div className="testimonial-container">
+            <SearchBar
+                counts={data&&data.track_counts? data.track_counts : undefined}
+                trackList={trackData}
+                totalCount={data&&data.pagination? data.pagination.total_count : 0}
+                updateSearch={onSearch}
+                updateSlug={onTrackSelect}
+                updateOrder={onOrderSelect}
+            />
             <TestimonialsList data={data}  loading={loading}/>
             {!loading && data.pagination && <PaginationArea pagination={data.pagination} onPageClicked={onPaginationClicked}/>}
         </div>

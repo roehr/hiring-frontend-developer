@@ -1,3 +1,26 @@
+:root{
+    --main-bg-color: white;
+    --label-default: #130B43;
+    --label-secondary: #5C5589;
+    --font-color: #3D3B45;
+    --button-border-color: #A9A6BD;
+    --hover-background: #F4F7FD;
+}
+
+.chevron{
+    width:13px;
+}
+
+.body{
+    color: var(--font-color);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
 
 h2{font-size: 31px;
     font-weight: 700;
@@ -13,38 +36,53 @@ h2{font-size: 31px;
     justify-content: space-between;
     height: 64px;
 }
+.trackoptions{
+    position: absolute;
+    max-height: 364px;
+    overflow-y: scroll;
+    width: 376px;
+    border-radius: 8px;
+    padding: 8px;
+    background: var(--main-bg-color);
+}
 
+.trackoptions .trackcount {
+    border-radius: 100px;
+    border: 1px solid;
+    padding: 3px 12px 3px 12px;
+}
+
+.trackoptions .option{
+    height: 58px;
+    display:flex;
+    align-items: center;
+}
+
+
+.searchfilter{
+    height: 48px;
+    max-width: 416px;
+    left: 147px;
+    top: 307px;
+    border-radius: 5px;
+    padding: 12px 21px 12px 21px;
+}
 .searchbar{
     display: flex;
+    align-content: center;
+    justify-content: space-between;
 }
-.mentoring-container{
+.tracksearchselection{
     display: flex;
-    flex-direction: column;
-}
-.m-headline{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 0px;
-    height: 155px;
-    width: 680px;
-    left: 380px;
-    top: 104px;
-    border-radius: 0px;
 }
-.m-results-zone{
-    min-height:300px;
-}
+
+
+
 .track-icon{
     width: 50px;
 }
-.testimonial-row {
-    display: flex;
-    border-bottom: 1px solid #EAECF3;
-}
-@keyframes spin {
-    0% {transform: rotate(0deg)}
-    100% {transform: rotate(360deg)}
-}
 
+button{
+    all:unset;
+}

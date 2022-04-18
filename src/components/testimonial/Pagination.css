@@ -1,0 +1,15 @@
+
+.pagination{
+    display:flex;
+    justify-content: space-between;
+}
+
+.pages{
+    display:flex;
+    justify-content: space-between;
+}
+.pagination-button{
+    padding:5px;
+    margin: 5px;
+    border: 1px solid var(--button-border-color);
+}

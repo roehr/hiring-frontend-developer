@@ -1,0 +1,25 @@
+
+.testimonial-row{
+    display: grid;
+    grid-template-columns: 64px 64px 1fr 2fr 100px 60px;
+    border-bottom: 1px solid #EAECF3;
+    min-height: 64px;
+    color: var(--label-default);
+    text-decoration: none;
+    align-items: center;
+}
+.testimonial-row--active{
+  background: var(--hover-background)
+}
+
+.mentor-image img{
+    border-radius: 50%;
+}
+@keyframes spin {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
+
+.testimonial-time{
+    text-align: end;
+}

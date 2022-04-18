@@ -1,4 +1,4 @@
-import {PaginationArea} from "../PaginationArea";
+import {PaginationArea} from "../testimonial/PaginationArea";
 import {render} from "@testing-library/react";
 import React from "react";
 import userEvent from "@testing-library/user-event";

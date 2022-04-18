@@ -1,6 +1,6 @@
 import * as React from "react";
-import {Pagination} from "../testimonial.model";
-import {computePaginationList} from "../utils";
+import {Pagination} from "../../testimonial.model";
+import {computePaginationList} from "../../utils";
 
 interface PaginationProps {
     pagination: Pagination
@@ -30,7 +30,7 @@ const PaginationArea = (props: PaginationProps) => {
     const renderPages = () =>
        computePaginationList(props.pagination.current_page, props.pagination.total_pages).map(
            (value, index)=>
-               <div key={index} onClick={()=>{onPageNumberClicked(value)}}  data-testid={`pagination-button${Number(value) === props.pagination.current_page ? '-active': index}`}>{value}</div>
+               <div className="pagination-button" key={index} onClick={()=>{onPageNumberClicked(value)}}  data-testid={`pagination-button${Number(value) === props.pagination.current_page ? '-active': index}`}>{value}</div>
 
        )
 
