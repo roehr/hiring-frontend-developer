@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wrapper test renders No data 1`] = `
+Object {
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "logTestingPlaygroundURL": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+}
+`;
+
+exports[`Wrapper test renders With Errors 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        id="testimonial"
+      >
+        <header>
+          <div
+            class="header-dummy"
+          >
+            <div
+              class="logo"
+            >
+               Exercism Logo
+            </div>
+            <div
+              class="dashboard"
+            >
+              Dashboard
+            </div>
+          </div>
+        </header>
+        <div
+          class="hero"
+        >
+          <div
+            class="hero-icon"
+          >
+            <img
+              src="[object Object]"
+            />
+          </div>
+          <div
+            class="hero-text"
+          >
+            <h2>
+              Testimonials I've left
+            </h2>
+          </div>
+          <div
+            class="hero-line"
+          >
+            <img
+              src="[object Object]"
+            />
+          </div>
+        </div>
+        <div
+          class="testimonial-container"
+          data-testid="container-loading"
+        >
+          <div
+            class="searchbar"
+          >
+            <div
+              class="tracksearchselection"
+            >
+              <div
+                class="trackdropdown"
+              >
+                <button
+                  aria-haspopup="true"
+                  class="trackbutton"
+                  data-testid="track-options-button"
+                >
+                  <img
+                    class="track-icon"
+                    src="https://d24y9kuxp2d7l2.cloudfront.net/assets/icons/all-tracks-5723af830c1df04c577e2aefdc8003f62c4270ec.svg"
+                  />
+                  <img
+                    class="chevron"
+                    src="https://d24y9kuxp2d7l2.cloudfront.net/assets/icons/chevron-down-5ae28e42ee217bae38f4eb1c119cafd0301dd5f6.svg"
+                  />
+                </button>
+              </div>
+              <div
+                class="searchFilter"
+              >
+                <input
+                  id="exercisefilter"
+                  placeholder="Filter by Exercise Title"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div
+              class="sortoption"
+            >
+              <div
+                class="searchOptions"
+              >
+                <select
+                  data-testid="sort-options"
+                  id="order"
+                  name="order"
+                >
+                  <option
+                    value="newest_first"
+                  >
+                    Sort by Most Recent
+                  </option>
+                  <option
+                    data-testid="sort-options-oldest"
+                    value="oldest_first"
+                  >
+                    Sort by Oldest First
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-zone"
+          >
+            <div
+              class="--fetching-overlay flex items-center"
+            >
+              <img
+                alt="Loading data"
+                class="icon c-icon--spin"
+                src="https://d24y9kuxp2d7l2.cloudfront.net/assets/icons/spinner-0813469c6c8f037b2e3d8aa5e987173eec009c02.svg"
+              />
+            </div>
+            <div
+              class="testimonials"
+            >
+              <div
+                class="no-testimonials"
+              >
+                <img
+                  alt=""
+                  class="icon"
+                  role="presentation"
+                  src="https://d24y9kuxp2d7l2.cloudfront.net/assets/icons/testimonials-15961f7587c64f2c588fb12b520cf2b87d029155.svg"
+                />
+                <h2>
+                  You currently have no testimonials
+                </h2>
+                <p>
+                  Testimonials are left by students on ending successful mentoring discussions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      id="testimonial"
+    >
+      <header>
+        <div
+          class="header-dummy"
+        >
+          <div
+            class="logo"
+          >
+             Exercism Logo
+          </div>
+          <div
+            class="dashboard"
+          >
+            Dashboard
+          </div>
+        </div>
+      </header>
+      <div
+        class="hero"
+      >
+        <div
+          class="hero-icon"
+        >
+          <img
+            src="[object Object]"
+          />
+        </div>
+        <div
+          class="hero-text"
+        >
+          <h2>
+            Testimonials I've left
+          </h2>
+        </div>
+        <div
+          class="hero-line"
+        >
+          <img
+            src="[object Object]"
+          />
+        </div>
+      </div>
+      <div
+        class="testimonial-container"
+        data-testid="container-loading"
+      >
+        <div
+          class="searchbar"
+        >
+          <div
+            class="tracksearchselection"
+          >
+            <div
+              class="trackdropdown"
+            >
+              <button
+                aria-haspopup="true"
+                class="trackbutton"
+                data-testid="track-options-button"
+              >
+                <img
+                  class="track-icon"
+                  src="https://d24y9kuxp2d7l2.cloudfront.net/assets/icons/all-tracks-5723af830c1df04c577e2aefdc8003f62c4270ec.svg"
+                />
+                <img
+                  class="chevron"
+                  src="https://d24y9kuxp2d7l2.cloudfront.net/assets/icons/chevron-down-5ae28e42ee217bae38f4eb1c119cafd0301dd5f6.svg"
+                />
+              </button>
+            </div>
+            <div
+              class="searchFilter"
+            >
+              <input
+                id="exercisefilter"
+                placeholder="Filter by Exercise Title"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            class="sortoption"
+          >
+            <div
+              class="searchOptions"
+            >
+              <select
+                data-testid="sort-options"
+                id="order"
+                name="order"
+              >
+                <option
+                  value="newest_first"
+                >
+                  Sort by Most Recent
+                </option>
+                <option
+                  data-testid="sort-options-oldest"
+                  value="oldest_first"
+                >
+                  Sort by Oldest First
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div
+          class="testimonial-zone"
+        >
+          <div
+            class="--fetching-overlay flex items-center"
+          >
+            <img
+              alt="Loading data"
+              class="icon c-icon--spin"
+              src="https://d24y9kuxp2d7l2.cloudfront.net/assets/icons/spinner-0813469c6c8f037b2e3d8aa5e987173eec009c02.svg"
+            />
+          </div>
+          <div
+            class="testimonials"
+          >
+            <div
+              class="no-testimonials"
+            >
+              <img
+                alt=""
+                class="icon"
+                role="presentation"
+                src="https://d24y9kuxp2d7l2.cloudfront.net/assets/icons/testimonials-15961f7587c64f2c588fb12b520cf2b87d029155.svg"
+              />
+              <h2>
+                You currently have no testimonials
+              </h2>
+              <p>
+                Testimonials are left by students on ending successful mentoring discussions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
