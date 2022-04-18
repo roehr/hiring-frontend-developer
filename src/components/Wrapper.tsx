@@ -21,8 +21,9 @@ const Wrapper = () => {
         getAllTracks().then((data) => {
                 settrackData(data.tracks)
             }
-        ).catch()
+        ).catch((err) => console.log("Error: " +err))
     }, [])
+
     React.useEffect(() => {
         isLoading(true)
         const trackParam=track===""? undefined: track
@@ -32,7 +33,7 @@ const Wrapper = () => {
                 setdata(data.testimonials);
                 isLoading(false);
             }
-        ).catch()
+        ).catch((err) => console.log("Error: " +err))
     }, [order, page, track, query])
 
     const onPaginationClicked = (newPage: number) => {
@@ -54,7 +55,7 @@ const Wrapper = () => {
     return <div id="testimonial">
         <Header/>
         <Hero/>
-        <div className="testimonial-container">
+        <div className="testimonial-container" data-testid={`${loading? "container-loading": "container-loaded"}`}>
             <SearchBar
                 counts={data&&data.track_counts? data.track_counts : undefined}
                 trackList={trackData}

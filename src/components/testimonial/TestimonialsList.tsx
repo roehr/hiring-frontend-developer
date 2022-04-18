@@ -33,7 +33,7 @@ const TestimonialsList = (props: TestimonialsListProps) => {
             <div className="testimonials">
                 {props.data ?
                     props.data.results.map((result, index) =>
-                        <TestimonialRow result={result} index={index}/>): renderNoTestimonials()
+                        <TestimonialRow key={`row-${index}`}result={result} index={index}/>): renderNoTestimonials()
                 }
             </div>
         )

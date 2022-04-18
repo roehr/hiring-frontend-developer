@@ -1,5 +1,5 @@
 import {PaginationArea} from "../testimonial/PaginationArea";
-import {render} from "@testing-library/react";
+import {fireEvent, render} from "@testing-library/react";
 import React from "react";
 import userEvent from "@testing-library/user-event";
 
@@ -17,19 +17,19 @@ describe('Pagination test', () => {
     describe('Clicks', () => {
         const onClick = jest.fn();
         const pagination = {current_page:4, total_pages:10, total_count:200};
-        test('Prev Button', async () => {
+        test('Prev Button',  () => {
             const underTest = render(<PaginationArea pagination={pagination} onPageClicked={onClick}/>)
-            await userEvent.click(underTest.getByTestId("prev-button"))
+            fireEvent.click(underTest.getByTestId("prev-button"))
             expect(onClick).toHaveBeenCalled()
         });
-        test('Next Button', async () => {
+        test('Next Button',  () => {
             const underTest = render(<PaginationArea pagination={pagination} onPageClicked={onClick}/>)
-            await userEvent.click(underTest.getByTestId("next-button"))
+            fireEvent.click(underTest.getByTestId("next-button"))
             expect(onClick).toHaveBeenCalled()
         });
-        test('Click on a Page Button', async () => {
+        test('Click on a Page Button',  () => {
             const underTest = render(<PaginationArea pagination={pagination} onPageClicked={onClick}/>)
-            await userEvent.click(underTest.getByTestId("pagination-button1"))
+            fireEvent.click(underTest.getByTestId("pagination-button1"))
             expect(onClick).toHaveBeenCalled()
         })
     });

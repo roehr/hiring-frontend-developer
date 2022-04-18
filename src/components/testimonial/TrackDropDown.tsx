@@ -11,7 +11,8 @@ const TrackDropDown = (props: TrackDropDownProps) => {
     const [active, setActive] = React.useState(false)
     const renderElement = (track:EnhancedTrack) => {
        return <div className="option" key={`track-${track.slug}`}>
-           <input type="radio" id={track.slug} name="trackoption" onChange={()=>props.updateData(track.slug)}/>
+           <input type="radio" data-testid={`track-option-${track.slug}`} id={track.slug} name="trackoption" onChange={()=>props.updateData(track.slug)
+           }/>
            <img className="track-icon" src={track.icon_url} />
            <label htmlFor={track.slug}>{track.title}</label>
            <span className="trackcount">{track.count}</span>
@@ -23,7 +24,7 @@ const TrackDropDown = (props: TrackDropDownProps) => {
     }
 
     return <div className="trackdropdown">
-        <button className="trackbutton" aria-haspopup="true" onClick={onButtonClicked}>
+        <button data-testid="track-options-button" className="trackbutton" aria-haspopup="true" onClick={onButtonClicked}>
             <img className="track-icon" src={iconMap.get("alltracks")}/>
             <img className="chevron" src={iconMap.get("chevron")}/>
         </button>

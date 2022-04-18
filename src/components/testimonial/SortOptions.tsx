@@ -5,9 +5,9 @@ interface SortOptionsProps{
 }
 const SortOptions = (props: SortOptionsProps) => {
     return <div className="searchOptions">
-        <select name="order" id="order" onChange={(event)=>props.onSelect(event.target.value)}>
+        <select data-testid= "sort-options" name="order" id="order" onChange={(event)=>props.onSelect(event.target.value)}>
             <option value="newest_first">Sort by Most Recent</option>
-            <option value="oldest_first">Sort by Oldest First</option>
+            <option data-testid= "sort-options-oldest" value="oldest_first">Sort by Oldest First</option>
         </select>
     </div>
 }

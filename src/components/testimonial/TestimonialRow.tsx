@@ -31,6 +31,7 @@ const TestimonialRow = (props: TestimonialRowProps) => {
 
     return (<a className={`testimonial-row ${hovered? 'testimonial-row--active' : ''}`} href={`#${props.result.id}`}
                key={props.index}
+               data-testid={`r-${props.result.id}-${hovered?'hovered':'inactive'}`}
                onMouseEnter={()=>setHovered(true)}
                onMouseLeave={()=>setHovered(false)}
         >

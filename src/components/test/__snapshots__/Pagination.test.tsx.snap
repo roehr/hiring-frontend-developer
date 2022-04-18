@@ -18,36 +18,43 @@ Object {
           class="pages"
         >
           <div
+            class="pagination-button"
             data-testid="pagination-button0"
           >
             1
           </div>
           <div
+            class="pagination-button"
             data-testid="pagination-button-active"
           >
             2
           </div>
           <div
+            class="pagination-button"
             data-testid="pagination-button2"
           >
             3
           </div>
           <div
+            class="pagination-button"
             data-testid="pagination-button3"
           >
             ...
           </div>
           <div
+            class="pagination-button"
             data-testid="pagination-button4"
           >
             8
           </div>
           <div
+            class="pagination-button"
             data-testid="pagination-button5"
           >
             9
           </div>
           <div
+            class="pagination-button"
             data-testid="pagination-button6"
           >
             10
@@ -76,36 +83,43 @@ Object {
         class="pages"
       >
         <div
+          class="pagination-button"
           data-testid="pagination-button0"
         >
           1
         </div>
         <div
+          class="pagination-button"
           data-testid="pagination-button-active"
         >
           2
         </div>
         <div
+          class="pagination-button"
           data-testid="pagination-button2"
         >
           3
         </div>
         <div
+          class="pagination-button"
           data-testid="pagination-button3"
         >
           ...
         </div>
         <div
+          class="pagination-button"
           data-testid="pagination-button4"
         >
           8
         </div>
         <div
+          class="pagination-button"
           data-testid="pagination-button5"
         >
           9
         </div>
         <div
+          class="pagination-button"
           data-testid="pagination-button6"
         >
           10
